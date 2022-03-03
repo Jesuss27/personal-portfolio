@@ -1,4 +1,5 @@
 $theme-colors : (
+    "primary":#8781FE,
     "white":    #fff,
 "gray-100": #f8f9fa ,
 "gray-200": #e9ecef ,
@@ -14,6 +15,90 @@ $theme-colors : (
 
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 
+h1{
+    white-space: nowrap;
+}
 p{
     max-width:45ch;
+
+}
+ul{
+    padding: left 0px;
+}
+li{
+    margin-bottom:16px;
+}
+.lineDiv{
+    background:#8781FE;
+    height:1px;
+    width:100%;
+    margin-left:3ch;
+    max-width:500px;
+
+}
+#arrow{
+    margin-right:1em;
+}
+.headshot{
+    min-width:250px;
+    min-height:352.6px;
+    max-height:450px;
+    max-width:300px;
+    width:100%;
+    height:auto;
+    background:red;
+    object-fit: cover;
+
+}
+
+.cardContainer{
+    position:relative;
+}
+.card{
+    border:none;
+    padding:1em;
+    outline:none;
+    
+}
+
+
+
+.skill{
+    border:1px solid red;
+    padding:0.5em;
+    width:auto;
+    display:inline-block;
+    margin:5px 10px;
+}
+
+
+
+@media screen and (min-width:768px) {
+
+
+    .cardContainer{
+        position:relative;
+    }
+    .imgContainer{
+        position:absolute;
+        right:0;
+        top:0;
+        width:60%;
+        height:100%;
+        background-color: #212529;
+        z-index:21;
+    }
+
+    //card styling
+    .card p{
+        max-width:50%;
+    }
+    .card h2{
+        color:black;
+    }
+    .card h3{
+        color:black;
+    }
+    
+    
 }
