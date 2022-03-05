@@ -9,15 +9,15 @@ function Landing() {
       <Container>
           <Row className='d-flex justify-content-start align-items-center' style={{height:"90vh"}}>
               <Col className='ml-auto'>
-              <h5 className='mt-2'>Hello, my name is</h5>
-              <h1 className='mt-2'>Jesus Javier Sevilla</h1>
-              <h3 className='mt-2'>I build stuff that works</h3>
-              <p className='mt-2'>I am a web developer that specializes in 
+              <p className='mt-2'>Hello, my name is</p>
+              <h2 className='mt-2 highlight-purple'>Jesus Javier Sevilla</h2>
+              <h1 className='mt-2 faded-purple'>I build stuff that works</h1>
+              <p className='mt-2'>I am a <span className='highlight-purple'>web developer</span> that specializes in 
                   building immersive digital adventures. Currently,
                   I'm looking to join a firm designing and developing digital products that is 
                   focused on evolving human-centric businesses and providing quality services</p>
 
-              <Button  variant="outline-primary">Check out my portfolio!</Button>
+              <Button style={{padding:"2em 3em"}}  variant="outline-primary">Check out my portfolio!</Button>
               
               </Col>
           </Row>

@@ -1,6 +1,5 @@
 $theme-colors : (
     "primary":#8781FE,
-    "white":    #fff,
 "gray-100": #f8f9fa ,
 "gray-200": #e9ecef ,
 "gray-300": #dee2e6 ,
@@ -13,26 +12,68 @@ $theme-colors : (
 "black":    #000 ,
 );
 
+@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Philosopher&family=Poppins&display=swap');
+
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
 h1{
-    white-space: nowrap;
+    font-family: "Philosopher",sans-serif;
+}
+h2{
+    font-family:"Philosopher", sans-serif;
+}
+h3{
+    font-family:"Mulish", sans-serif;
+}
+h4{
+    font-family:"Mulish", sans-serif;
 }
 p{
-    max-width:45ch;
+    font-family:"Mulish", sans-serif;
+}
 
+
+
+
+
+
+
+#about{
+    white-space: nowrap;
+}
+// .btn{
+//     padding: 1rem 2rem;
+//     display:flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+.btn-outline-primary:hover{
+    color:white;
+}
+p{
+    max-width:55ch;
+    padding:0;
 }
 ul{
     padding: left 0px;
 }
 li{
     margin-bottom:16px;
-}
+    font-family:"Mulish", sans-serif
+} 
+
+
 .lineDiv{
     background:#8781FE;
-    height:1px;
+    height:2px;
     width:100%;
     margin-left:3ch;
+    margin-right:3ch;
     max-width:500px;
 
 }
@@ -46,9 +87,41 @@ li{
     max-width:300px;
     width:100%;
     height:auto;
-    background:red;
     object-fit: cover;
+    position: relative;
+}
+.headshot:hover{
+    transform: translate(10px,10px);
+}
+.headshot-mask{
+    position:relative;
+    height:auto;
+}
 
+.headshot-mask:before{
+    content:"";
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:transparent;
+    width:100%;
+    height:100%;
+    border:2px solid #8781FE;
+}
+.headshot-mask:after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#8781FE;
+    top:0;
+    left:0;
+    opacity:0.333;
+    transition:all 0.3s ease;
+}
+
+.headshot-mask:hover:after{
+    opacity:0;
 }
 
 .cardContainer{
@@ -62,43 +135,112 @@ li{
 }
 
 
-
-.skill{
-    border:1px solid red;
-    padding:0.5em;
-    width:auto;
-    display:inline-block;
-    margin:5px 10px;
+.responsive{
+    max-width:100%;
+    height:auto;
 }
+.highlight-purple{
+    color:var(--primary-purple)
+  }
 
+  .faded-purple{
+    color:var(--faded-purple);
+  }
 
-
-@media screen and (min-width:768px) {
-
-
-    .cardContainer{
-        position:relative;
-    }
-    .imgContainer{
-        position:absolute;
-        right:0;
-        top:0;
-        width:60%;
-        height:100%;
-        background-color: #212529;
-        z-index:21;
-    }
-
-    //card styling
-    .card p{
-        max-width:50%;
-    }
-    .card h2{
-        color:black;
-    }
-    .card h3{
-        color:black;
-    }
+  h1{
+    font-size:var(--h1-mobile-s);
+    font-family: 'Philosopher', sans-serif;
+  }
+  h2{
+    font-size:var(--h2-mobile-s);
+    font-family: 'Philosopher', sans-serif;
+  }
+  p{
+    font-size:var(--p-mobile-s);
+    font-family: 'Mulish', sans-serif;
+  }
+  h3{
+    font-size:var(--h3-mobile-s);
+    font-family: 'Mulish', sans-serif;
+  }
+  h4{
+    opacity:0.6;
+    font-family: 'Mulish', sans-serif;
     
-    
-}
+  }
+
+
+  @media (min-width:350px){
+    h1{
+      font-size:var(--h1-mobile-md)
+    }
+    p{
+    font-size:var(--p-mobile-md)
+  }
+  h3{
+    font-size:var(--h3-mobile-md)
+  }
+  h2{
+    font-size:var(--h2-mobile-md)
+  }
+  
+  }
+  @media (min-width:375px){
+    h1{
+      font-size:var(--h1-mobile-l)
+    }
+    p{
+    font-size:var(--p-mobile-l)
+  }
+  h3{
+    font-size:var(--h3-mobile-l)
+  }
+  h2{
+    font-size:var(--h2-mobile-l)
+  }
+  }
+  @media (min-width:768px){
+    h1{
+      font-size:var(--h1-desktop-s)
+    }
+    p{
+    font-size:var(--p-desktop-s)
+  }
+  h3{
+    font-size:var(--h3-desktop-s)
+  }
+  h2{
+    font-size:var(--h2-desktop-s)
+  }
+  }
+  @media (min-width:1024px){
+    h1{
+      font-size:var(--h1-desktop-md)
+    }
+    p{
+    font-size:var(--p-desktop-md)
+  }
+  h3{
+    font-size:var(--h3-desktop-md)
+  }
+  h2{
+    font-size:var(--h2-desktop-md)
+  }
+  .linesContainer h3{
+    white-space:nowrap;
+  }
+  }
+  @media (min-width:1440px){
+    h1{
+      font-size:var(--h1-desktop-l)
+    }
+    p{
+    font-size:var(--p-desktop-l)
+  }
+  h3{
+    font-size:var(--h3-desktop-l)
+  }
+  h2{
+    font-size:var(--h2-desktop-l)
+  }
+  }

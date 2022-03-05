@@ -5,26 +5,45 @@ import Card from "react-bootstrap/Card"
 import Badge from "react-bootstrap/Badge"
 import { useMediaQuery } from './hooks/useMediaQuery'
 
-function Project( { title, description, skillsDiv, id }) {
-
-    const isMedium = useMediaQuery( `(min-width:768px)`) ;
+function Project( { title, description, skillsDiv, isMedium }) {
     
   return (
     <Row className='my-5'>
         <Col> 
-            <div className="cardContainer">
-                <div className="imgContainer"></div>
+            <div className="cardContainer" style={{position:"relative"}}>
+                <div style={{
+                    position:"absolute",
+                    right: "0",
+                    bottom:"0",
+                    width:"60%",
+                    height:"350px",
+                    backgroundColor:"#DAD8FF",
+                    zIndex:"21",
+                    display: isMedium? "inline-block":"none",
+                }}className="imgContainer responsive"></div>
+
                 <div className="card" style={{
                     border:"none",
                     color:"white",
                     background:isMedium ? "white" : "#8781FE",
                     opacity:"1",
+                    padding:"2em",
+                    
                    }}>
-                    <h2 className='my-2'>Featured Project</h2>
-                    <h3 className='my-2'>{title}</h3>
+                    <h4 style={{
+                        color: isMedium ? "black" : "white",
+                        zIndex:"22"
+                    }}
+                    className='my-2'>Featured Project</h4>
+
+
+                    <h3 style={{
+                        color: isMedium ? "black" : "white",
+                        zIndex:"22"
+                    }}className='my-2'>{title}</h3>
                     <p className='my-2'
                         style={{
-                            background: isMedium ? "#8781FE" : "transparent",
+                            background: isMedium ? "#8781FE" : "",
                             padding: isMedium ? "1em" : "0",
                             zIndex:"22"
                         }}>{description}</p>
@@ -37,13 +56,16 @@ function Project( { title, description, skillsDiv, id }) {
                     className="skillsDiv">
                         {skillsDiv.map((skill,index) => (
                             <Badge 
+                            bg="secondary"
                             style={
                                 {padding:"0.75em",
                                 borderRadius:"0px",
-                                backgroundColor:"#8781FE",
+                                backgroundColor:"#FFFADE",
+                                fontFamily:`"Mulish", sans-serif`,
+                                letterSpacing:"1px"
                                 }
                             }
-                            className="mx-2"key={index}>{skill}</Badge>
+                            className="m-2"key={index}>{skill}</Badge>
                         ))}
  
                     </div>

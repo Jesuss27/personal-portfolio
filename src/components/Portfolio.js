@@ -6,20 +6,25 @@ import { featuredProjects } from './featuredProjects'
 import { useMediaQuery } from './hooks/useMediaQuery.js'
 
 function Portfolio() {
-    const isMedium = `(min-width:768px)`
+    const isMedium = useMediaQuery(`(min-width:768px)`)
   return (
             <Row className='my-5'>
                 <Col>
                     <div className="titleDiv d-flex align-items-center"
                         style={{
-                            maxWidth:isMedium ? "50%" : "none",
+                            maxWidth:isMedium ? "50%" : "100%",
                         }}>
-                        <h1>Portfolio</h1>
+                        <h2>Portfolio</h2>
                         <div className="lineDiv"></div>
                     </div>
                     {/* featured projects */}
                     {featuredProjects.map(project => (
-                        <Project key={project.title} title={project.title} description={project.description} skillsDiv={project.skills} id={project.id} />
+                        <Project key={project.title} 
+                        title={project.title} 
+                        description={project.description}
+                         skillsDiv={project.skills} 
+                         isMedium={isMedium} 
+                         id={project.id} />
                     ))}
                 </Col>
 

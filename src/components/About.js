@@ -7,9 +7,9 @@ function About() {
   return (
      <Container>
         <Row className='d-flex justify-content-start align-items-center' style={{minHeight: "100vh"}} >
-            <Col md={6}className='ml-auto'>
-                <div className="titleDiv d-flex align-items-center">
-                    <h1>About Me</h1>
+            <Col md={6}className='ml-auto d-flex flex-column justify-content-around'>
+                <div className="titleDiv d-flex  align-items-center mb-5">
+                    <h2 id='about'>About Me</h2>
                     <div className="lineDiv"></div>
                 </div>
                 <p>Hello! My name is Jesus and I like to make the web
@@ -24,8 +24,8 @@ function About() {
                     I've gotten quiet good at it.</p>   
 
                 <p>Today I spend my days, when I'm not playing chess or 
-                    rolling on the jiu jitsu mats, designing and
-                     developing web applications that look amazing 
+                    rolling on the jiu jitsu mats, <span className="highlight-purple">designing </span>and
+                     <span className="highlight-purple"> developing</span> web applications that look amazing 
                      and work just the way that they should!</p>
 
                 <p>Here is some of the tech I've been working with.</p>
@@ -37,7 +37,7 @@ function About() {
                             <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14">
                                 <path id="Polygon_1" data-name="Polygon 1" d="M7,0l7,13H0Z" transform="translate(13) rotate(90)" fill="#8781fe"/>
                             </svg>
-                            JavaScript (ES6+)
+                            JavaScript
                             </li>
                             <li className='d-flex align-items-center'>
                             <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14">
@@ -78,7 +78,9 @@ function About() {
                 </Row>
             </Col>
             <Col className='d-flex justify-content-center align-items-center' md={6}>
-                <img src="/images/headshotPNG.png" alt="" className='headshot my-4' />
+                <div className="headshot-mask my-4">
+                <img src="/images/headshotPNG.png" alt="" className='headshot' />
+                </div>
 
 
                 
