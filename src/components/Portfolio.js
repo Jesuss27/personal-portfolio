@@ -14,7 +14,7 @@ function Portfolio() {
                         style={{
                             maxWidth:isMedium ? "50%" : "100%",
                         }}>
-                        <h2>Portfolio</h2>
+                        <h2 id="portfolio">Portfolio</h2>
                         <div className="lineDiv"></div>
                     </div>
                     {/* featured projects */}
