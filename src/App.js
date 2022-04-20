@@ -6,9 +6,6 @@ import {Routes, Route} from "react-router-dom"
 //import components
 import Home from "./pages/Home"
 // styling and animation
-import { createGlobalStyle } from "styled-components";
-import {motion} from "framer-motion"
-import Contact from './pages/Contact';
 import {useState} from "react"
 
 function App() {
