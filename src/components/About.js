@@ -1,11 +1,24 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Container from 'react-bootstrap/Container'
+import { useInView } from 'react-intersection-observer';
 
-function About() {
+function About( {setIsAboutVisible}) {
+    const { ref:aboutRef, inView} = useInView({
+        threshold:0.5,
+      });
+      
+  useEffect(()=> {
+
+    setIsAboutVisible(inView)
+  })
+
+
+
+
   return (
-     <Container>
+     <Container  ref={aboutRef} >
         <Row className='d-flex justify-content-start align-items-center' style={{minHeight: "100vh"}} >
             <Col md={6}className='ml-auto d-flex flex-column justify-content-around'>
                 <div className="titleDiv d-flex  align-items-center mb-5">

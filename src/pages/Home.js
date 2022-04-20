@@ -7,12 +7,13 @@ import Portfolio from "../components/Portfolio.js"
 import Container from "react-bootstrap/Container"
 import SeeMore from '../components/SeeMore';
 import InTouch from '../components/InTouch';
+import Contact from "../pages/Contact"
 // styling and animation
 import { createGlobalStyle } from "styled-components";
 import {motion} from "framer-motion"
 
 
-function Home() {
+function Home( { setIsLandingVisible, setIsAboutVisible, setIsPortfolioVisible, setIsContactVisible }) {
     const variants = {
         visible: {
           opacity:1,
@@ -33,17 +34,20 @@ function Home() {
       <motion.div initial={"hidden"} animate={"visible"} variants={variants}>
 
         <motion.div whileInView={"visible"} initial={"hidden"} variants={variants}>
-          <Landing />
+          <Landing setIsLandingVisible={setIsLandingVisible}/>
         </motion.div>
 
         <motion.div  whileInView={"visible"} initial={"hidden"} variants={variants}>
-          <About />
+          <About setIsAboutVisible={setIsAboutVisible} />
         </motion.div>
 
-        <motion.div whileInView={"visible"} initial={"hidden"} variants={variants}><Portfolio /></motion.div>
+        <motion.div whileInView={"visible"} initial={"hidden"} variants={variants}>
+          <Portfolio setIsPortfolioVisible={setIsPortfolioVisible} />
+          </motion.div>
         
         <motion.div whileInView={"visible"} initial={"hidden"} variants={variants}><SeeMore /></motion.div>
         <motion.div whileInView={"visible"} initial={"hidden"} variants={variants}><InTouch /></motion.div>
+        <motion.div whileInView={"visible"} initial={"hidden"} variants={variants}><Contact setIsContactVisible={setIsContactVisible} /></motion.div>
 
       </motion.div>
     </Container>

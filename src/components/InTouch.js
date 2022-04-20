@@ -30,14 +30,7 @@ function InTouch() {
               we can work together at making
                 the web a more <span className='highlight-purple'>beautiful place</span>.
               </h3>
-              <Button className='mx-auto' style={{
-                        minWidth:"200px",
-                        padding:isLarge?"2em 7em":"1em 2em",
-                        minHeight:"48px",
-                        minWidth:"250px",
-                        
-                        color:"white"
-                    }} ><h2>Contact</h2></Button>
+              
           </Col>
           </Row>
       </Container>

@@ -9,6 +9,7 @@ import Home from "./pages/Home"
 import { createGlobalStyle } from "styled-components";
 import {motion} from "framer-motion"
 import Contact from './pages/Contact';
+import {useState} from "react"
 
 function App() {
 
@@ -52,14 +53,36 @@ function App() {
   
   `
 
+
+
+const [isLandingVisible, setIsLandingVisible] = useState()
+const [isAboutVisible, setIsAboutVisible] = useState()
+const [isPortfolioVisible, setIsPortfolioVisible] = useState()
+const [isContactVisible, setIsContactVisible] = useState()
+console.log(isLandingVisible)
+
   
   return (
     <>
     <GlobalStyles />
-    <Navigation />
+    <Navigation 
+    isLandingVisible={isLandingVisible} 
+    isAboutVisible={isAboutVisible} 
+    isPortfolioVisible={isPortfolioVisible} 
+    isContactVisible={isContactVisible} />
     <Routes>
-      <Route path="/" element={<Home />}></Route>
-      <Route path="/contact" element={<Contact />}></Route>
+      <Route 
+      path="/" 
+      element={
+      <Home 
+        setIsLandingVisible={setIsLandingVisible} 
+        setIsAboutVisible={setIsAboutVisible} 
+        setIsPortfolioVisible={setIsPortfolioVisible}  
+        setIsContactVisible={setIsContactVisible}
+        />}>
+
+        </Route>
+      
     </Routes>
     
     

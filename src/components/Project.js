@@ -4,8 +4,10 @@ import Col from "react-bootstrap/Col"
 import Card from "react-bootstrap/Card"
 import Badge from "react-bootstrap/Badge"
 import { useMediaQuery } from './hooks/useMediaQuery'
+import Heroku from "./svg/Heroku.js"
+import Github from "./svg/Github.js"
 
-function Project( { title, description, skillsDiv, isMedium }) {
+function Project( { title, description, skillsDiv, isMedium, herokuLink, githubLink  }) {
     
   return (
     <Row className='my-5'>
@@ -36,11 +38,16 @@ function Project( { title, description, skillsDiv, isMedium }) {
                     }}
                     className='my-2'>Featured Project</h4>
 
+                    <div className="d-flex align-items-center">
+                        <h3 style={{
+                            color: isMedium ? "black" : "white",
+                            zIndex:"22"
+                        }}className='my-2'>{title}</h3>
+                        <Heroku link={herokuLink} />
+                        <Github link={githubLink}   />
+                    </div>
 
-                    <h3 style={{
-                        color: isMedium ? "black" : "white",
-                        zIndex:"22"
-                    }}className='my-2'>{title}</h3>
+
                     <p className='my-2'
                         style={{
                             background: isMedium ? "#8781FE" : "",
@@ -69,6 +76,7 @@ function Project( { title, description, skillsDiv, isMedium }) {
                         ))}
  
                     </div>
+                    <p><a href={herokuLink} target='__blank' style={{color:"black"}}>Link to project</a></p>
                 </div>
             </div>
 

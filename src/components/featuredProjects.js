@@ -6,7 +6,9 @@ export const featuredProjects = [
         Choose any word and find it in the poem, highlighted just for you.`,
         skills:["Bootstrap 4", "Vanilla JavaScript", "HTML", "CSS"],
         image:"",
-        id:0
+        id:0,
+        githubLink:"https://github.com/Jesuss27/Poetify",
+        herokuLink:"https://literbug.herokuapp.com/",
 
     },
     {
@@ -18,6 +20,9 @@ export const featuredProjects = [
         skills:["React", "React-Bootstrap", "SASS", "Styled Components"],
         image:"",
         id:1,
+        githubLink:"https://github.com/Jesuss27/aip-react-bootstrap",
+        herokuLink:"https://aipfriendly.herokuapp.com/",
+
 
     },
     {
@@ -29,6 +34,9 @@ export const featuredProjects = [
         skills:["Bootstrap 4", "Vanilla JavaScript", "HTML", "CSS"],
         image:"",
         id:2,
+        githubLink:"https://github.com/Jesuss27/Weather-App",
+        herokuLink:"https://weatherserve.herokuapp.com/",
+
     },
     
 ]

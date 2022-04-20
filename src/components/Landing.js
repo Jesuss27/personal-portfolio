@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { useRef, useEffect, useState } from 'react'
+import { useInView } from 'react-intersection-observer';
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Button from "react-bootstrap/Button"
 import {motion} from "framer-motion"
 
-function Landing() {
+function Landing( {setIsLandingVisible}) {
+  const { ref:landingRef, inView} = useInView({
+    threshold:0.5,
+  });
+  useEffect(()=> {
+
+    setIsLandingVisible(inView)
+  })
+  
+ 
   return (
-      <Container>
+      <Container ref={landingRef}  >
           <Row className='d-flex justify-content-start align-items-center' style={{height:"90vh"}}>
               <Col className='ml-auto'>
               <p className='mt-2'>Hello, my name is</p>

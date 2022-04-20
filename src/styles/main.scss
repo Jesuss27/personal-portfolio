@@ -20,7 +20,25 @@ $theme-colors : (
     margin:0;
     padding:0;
     box-sizing: border-box;
+    
 }
+.navLine{
+  height:0.3rem;
+  background:#8781FE;
+  position:absolute;
+  bottom:-5px;
+  left:-25%;
+  width:50px;
+  border-radius: 10px;
+  opacity:0;
+  transition:all 0.3s ease;
+}
+.navLine.visible{
+  left:0;
+  opacity:1;
+
+}
+
 h1{
     font-family: "Philosopher",sans-serif;
 }
@@ -45,12 +63,48 @@ a:hover{
   text-decoration:none
 
 }
+.horizontalLine{
+  background:black;
+  width:2px;
+  height:100px;
+}
 
 
 
 
-
-
+.form-group{
+  width:100%;
+  margin-bottom:1rem;
+}
+label{
+  font-family:"Mulish",sans-serif;
+  width:100%;
+  font-size:16px;
+}
+input,textarea{
+  width:100%;
+  font-size:16px;
+  padding:1.2rem;
+  outline:none;
+  border:none;
+  border-radius: 8px;
+  background:#e8e7fd;
+}
+textarea{
+  min-height: 150px;
+  resize:vertical;
+}
+.button[type="submit"]{
+background:#e8e7fd;
+color:black;
+font-size:22px;
+display:inline-block;
+outline:none;
+border:none;
+padding:1rem 4rem;
+border-radius: 5px;
+cursor:pointer;
+}
 #about{
     white-space: nowrap;
 }
@@ -142,10 +196,31 @@ li{
     
 }
 
+form{
+  padding:1em;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: #8781FE;
+}
+
+
+
 
 .responsive{
     max-width:100%;
     height:auto;
+}
+.item{
+  background:#e8e7fd;
+  border-radius: 5px;
+  padding:1em;
+  font-family: "Mulish";
+  color:black;
+}
+.itemText{
+  font-family:"Mulish",sans-serif;
+  font-size: 16px;
+  word-break:break-all;
 }
 .highlight-purple{
     color:var(--primary-purple)
