@@ -1,11 +1,16 @@
+import aipScreenshot from "../images/aipScreenshot.png"
+import literbugScreenshot from "../images/literbugScreenshot.png"
+import weatherserveScreenshot from "../images/weatherserveScreenshot.png"
+
+
 export const featuredProjects = [
     {
         title:"Poetify",
-        description:`An app that takes your favorite poems
+        description:`An app that takes your favorite books and poems
         and scans them for literary motifs and commonly used words.
-        Choose any word and find it in the poem, highlighted just for you.`,
+        Access any piece of literature available in the Gutenberg Open Source Project!`,
         skills:["Bootstrap 4", "Vanilla JavaScript", "HTML", "CSS"],
-        image:"",
+        image:literbugScreenshot,
         id:0,
         githubLink:"https://github.com/Jesuss27/Poetify",
         herokuLink:"https://literbug.herokuapp.com/",
@@ -18,7 +23,7 @@ export const featuredProjects = [
          with the Auto Immune Protocol (AIP) diet.
          If you have done this diet, than you know exactly why this is needed.`,
         skills:["React", "React-Bootstrap", "SASS", "Styled Components"],
-        image:"",
+        image:aipScreenshot,
         id:1,
         githubLink:"https://github.com/Jesuss27/aip-react-bootstrap",
         herokuLink:"https://aipfriendly.herokuapp.com/",
@@ -32,7 +37,7 @@ export const featuredProjects = [
          7-day forecast. Also, displays
          the UV index (always use sunscreen)!`,
         skills:["Bootstrap 4", "Vanilla JavaScript", "HTML", "CSS"],
-        image:"",
+        image:weatherserveScreenshot,
         id:2,
         githubLink:"https://github.com/Jesuss27/Weather-App",
         herokuLink:"https://weatherserve.herokuapp.com/",

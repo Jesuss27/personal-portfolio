@@ -91,7 +91,7 @@ function About( {setIsAboutVisible}) {
                 </Row>
             </Col>
             <Col className='d-flex justify-content-center align-items-center' md={6}>
-                <div className="headshot-mask my-4">
+                <div  style={{boxShadow:"5px 5px 10px grey",}}className="photo-mask my-4">
                 <img src="/images/headshotPNG.png" alt="" className='headshot' />
                 </div>
 

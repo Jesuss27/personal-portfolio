@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {useState , useRef} from "react"
 import { Row } from 'react-bootstrap';
 import emailjs from 'emailjs-com'
 
 
-function ContactForm() {
+function ContactForm({ setEmailSuccess, emailSuccess }) {
     const [name,setName] = useState("");
     const [email,setEmail] = useState("");
     const [message,setMessage] = useState("");
@@ -15,14 +15,15 @@ function ContactForm() {
         e.preventDefault()
         emailjs.sendForm("service_1aww0gz", "template_jtki5yo", e.target, "Su7s4Px5TZdDnuQvx")
     .then(function(response) {
+        setEmailSuccess(true)
        console.log('SUCCESS!', response.status, response.text);
+       
     }, function(error) {
+        setEmailSuccess(false)
        console.log('FAILED...', error);
-    });
-    form.target.reset()
-
+    })    
     }
-
+    
 
   return (
     <div  style={{
@@ -30,7 +31,7 @@ function ContactForm() {
         border:"2px solid #e8e7fd" ,
     }}>
 
-        <form ref={form} onSubmit={sendEmail}>
+        <form ref={form} id="form" onSubmit={sendEmail}>
             <div className="form-group">
                 <label htmlFor="name">
                     Name:

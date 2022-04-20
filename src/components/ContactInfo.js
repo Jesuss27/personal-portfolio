@@ -7,8 +7,11 @@ import Pin from "../components/svg/Pin"
 import Phone from './svg/Phone'
 import EmailSvg from './svg/EmailSvg'
 import Map from "../components/Map"
+import ShowSuccess from './ShowSuccess'
+import ShowFailure from './ShowFailure'
 
-function ContactInfo() {
+function ContactInfo({emailSuccess}) {
+
 
    
   return (
@@ -21,6 +24,12 @@ function ContactInfo() {
         <ContactItem svg={<Pin/>} text="San Diego, California"/>
         <ContactItem svg={<Phone/>} text="714-234-7791"/>
         <ContactItem svg={<EmailSvg/>} text="jesussevilla27@icloud.com"/>
+        {emailSuccess ===true &&
+          <ShowSuccess />
+        }
+        {emailSuccess === false &&
+          <ShowFailure />
+        }
         </Row>
         
         

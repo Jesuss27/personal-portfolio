@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Container from 'react-bootstrap/Container'
@@ -8,13 +8,15 @@ import { useInView } from 'react-intersection-observer';
 
 
 function Contact( {setIsContactVisible}) {
+
+  const [emailSuccess, setEmailSuccess] = useState()
+
   const { ref:contactRef, inView} = useInView(
     {
       threshold:0.5,
     }
   );
   useEffect(()=> {
-
     setIsContactVisible(inView)
   })
   return (
@@ -24,13 +26,13 @@ function Contact( {setIsContactVisible}) {
       </Row>
       <Row>
         <Col md={6} className="d-flex justify-content-center">
-          <ContactInfo />
+          <ContactInfo emailSuccess={emailSuccess} />
           
           
         </Col>
 
         <Col md={6}>
-          <ContactForm />
+          <ContactForm emailSuccess={emailSuccess} setEmailSuccess={setEmailSuccess}/>
           
         </Col>
       </Row>

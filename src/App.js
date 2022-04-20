@@ -59,7 +59,7 @@ const [isLandingVisible, setIsLandingVisible] = useState()
 const [isAboutVisible, setIsAboutVisible] = useState()
 const [isPortfolioVisible, setIsPortfolioVisible] = useState()
 const [isContactVisible, setIsContactVisible] = useState()
-console.log(isLandingVisible)
+
 
   
   return (

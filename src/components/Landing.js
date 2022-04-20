@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Button from "react-bootstrap/Button"
 import {motion} from "framer-motion"
+import { HashLink as Link} from "react-router-hash-link"
 
 function Landing( {setIsLandingVisible}) {
   const { ref:landingRef, inView} = useInView({
@@ -17,7 +18,7 @@ function Landing( {setIsLandingVisible}) {
   
  
   return (
-      <Container ref={landingRef}  >
+      <Container id="home" ref={landingRef}  >
           <Row className='d-flex justify-content-start align-items-center' style={{height:"90vh"}}>
               <Col className='ml-auto'>
               <p className='mt-2'>Hello, my name is</p>
@@ -28,7 +29,7 @@ function Landing( {setIsLandingVisible}) {
                   I'm looking to join a firm designing and developing digital products that is 
                   focused on evolving human-centric businesses and providing quality services</p>
 
-              <Button style={{padding:"2em 3em"}}  variant="outline-primary">Check out my portfolio!</Button>
+              <Link to="/#portfolio"><Button style={{padding:"2em 3em"}}  variant="outline-primary">Check out my portfolio!</Button></Link>
               
               </Col>
           </Row>

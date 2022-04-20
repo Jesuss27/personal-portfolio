@@ -7,7 +7,7 @@ import { useMediaQuery } from './hooks/useMediaQuery'
 import Heroku from "./svg/Heroku.js"
 import Github from "./svg/Github.js"
 
-function Project( { title, description, skillsDiv, isMedium, herokuLink, githubLink  }) {
+function Project( { title, description, skillsDiv, isMedium, herokuLink, githubLink , img }) {
     
   return (
     <Row className='my-5'>
@@ -18,11 +18,15 @@ function Project( { title, description, skillsDiv, isMedium, herokuLink, githubL
                     right: "0",
                     bottom:"0",
                     width:"60%",
-                    height:"350px",
+                    border:"1px solid black",
+                    boxShadow:"5px 5px 10px grey",
+                    
                     backgroundColor:"#DAD8FF",
                     zIndex:"21",
                     display: isMedium? "inline-block":"none",
-                }}className="imgContainer responsive"></div>
+                }}className="imgContainer responsive photo-mask">
+                    <img src={img} style={{width:"100%",height:"auto",objectFit:"contain",zIndex:"100"}} alt=""  ></img>
+                    </div>
 
                 <div className="card" style={{
                     border:"none",
@@ -76,7 +80,7 @@ function Project( { title, description, skillsDiv, isMedium, herokuLink, githubL
                         ))}
  
                     </div>
-                    <p><a href={herokuLink} target='__blank' style={{color:"black"}}>Link to project</a></p>
+                    <p><a href={herokuLink} target='__blank' style={{textDecoration:"underline",color:"black"}}>Link to project</a></p>
                 </div>
             </div>
 

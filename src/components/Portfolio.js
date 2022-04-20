@@ -17,7 +17,7 @@ function Portfolio( {setIsPortfolioVisible} ) {
     
 
 
-    const isMedium = useMediaQuery(`(min-width:768px)`)
+    const isMedium = useMediaQuery(`(min-width:1024px)`)
   return (
             <Row ref={portfolioRef} className='my-5'>
                 <Col>
@@ -37,7 +37,8 @@ function Portfolio( {setIsPortfolioVisible} ) {
                          isMedium={isMedium} 
                          id={project.id}
                          githubLink={project.githubLink}
-                         herokuLink={project.herokuLink} />
+                         herokuLink={project.herokuLink}
+                         img={project.image} />
                     ))}
                 </Col>
 

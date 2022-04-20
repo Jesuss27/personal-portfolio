@@ -14,7 +14,7 @@ function Navigation( {isLandingVisible, isAboutVisible,isPortfolioVisible,isCont
                 <Navbar.Toggle aria-controls='basic-navbar-nav'/>
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="ml-auto">
-                    <Nav.Item className='my-2 mx-4'><Link to="/"><LinkItem text={"Home"} isVisible={isLandingVisible}/></Link></Nav.Item>
+                    <Nav.Item className='my-2 mx-4'><Link to="/#home"><LinkItem text={"Home"} isVisible={isLandingVisible}/></Link></Nav.Item>
                      <Nav.Item className='my-2 mx-4' ><Link to="/#about"><LinkItem text={"About Me"} isVisible={isAboutVisible}/></Link></Nav.Item>
                     <Nav.Item className='my-2 mx-4'><Link to="/#portfolio"><LinkItem text={"Portfolio"} isVisible={isPortfolioVisible}/></Link></Nav.Item>
                     <Nav.Item className='my-2 mx-4'><Link to="/#contact"><LinkItem text={"Contact"} isVisible={isContactVisible}/></Link></Nav.Item>
