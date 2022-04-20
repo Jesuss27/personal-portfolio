@@ -9,7 +9,6 @@ import SeeMore from '../components/SeeMore';
 import InTouch from '../components/InTouch';
 import Contact from "../pages/Contact"
 // styling and animation
-import { createGlobalStyle } from "styled-components";
 import {motion} from "framer-motion"
 
 
