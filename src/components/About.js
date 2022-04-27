@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Container from 'react-bootstrap/Container'
 import { useInView } from 'react-intersection-observer';
+import headshot from "../images/headshotPNG.png"
 
 function About( {setIsAboutVisible}) {
     const { ref:aboutRef, inView} = useInView({
@@ -92,7 +93,7 @@ function About( {setIsAboutVisible}) {
             </Col>
             <Col className='d-flex justify-content-center align-items-center' md={6}>
                 <div  style={{boxShadow:"5px 5px 10px grey",}}className="photo-mask my-4">
-                <img src="/images/headshotPNG.png" alt="" className='headshot' />
+                <img src={headshot}alt="" className='headshot' />
                 </div>
 
 
