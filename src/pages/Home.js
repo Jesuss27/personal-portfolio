@@ -28,6 +28,7 @@ function Home( { setIsLandingVisible, setIsAboutVisible, setIsPortfolioVisible, 
         }
       }
   return (
+    <>
     <Container>
       {/* motion container */}
       <motion.div initial={"hidden"} animate={"visible"} variants={variants}>
@@ -46,10 +47,10 @@ function Home( { setIsLandingVisible, setIsAboutVisible, setIsPortfolioVisible, 
         
         <motion.div whileInView={"visible"} initial={"hidden"} variants={variants}><SeeMore /></motion.div>
         <motion.div whileInView={"visible"} initial={"hidden"} variants={variants}><InTouch /></motion.div>
-        <motion.div whileInView={"visible"} initial={"hidden"} variants={variants}><Contact setIsContactVisible={setIsContactVisible} /></motion.div>
-
       </motion.div>
     </Container>
+    <Contact setIsContactVisible={setIsContactVisible} />
+    </>
   )
 }
 

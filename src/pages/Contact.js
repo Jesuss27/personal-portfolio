@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container'
 import ContactInfo from "../components/ContactInfo.js"
 import ContactForm from "../components/ContactForm.js"
 import { useInView } from 'react-intersection-observer';
+import "../styles/Contact.css"
 
 
 function Contact( {setIsContactVisible}) {
@@ -20,23 +21,21 @@ function Contact( {setIsContactVisible}) {
     setIsContactVisible(inView)
   })
   return (
-    <Container  ref={contactRef} id="contact" style={{height:"100vh"}}>
-              <Row className='d-flex justify-content-center'>
-        <h1 style={{textAlign:"center"}} className="mb-5">Contact</h1>
-      </Row>
-      <Row>
-        <Col md={6} className="d-flex justify-content-center">
-          <ContactInfo emailSuccess={emailSuccess} />
-          
-          
-        </Col>
+    <div ref={contactRef} id="contact" className="footer-section">
 
-        <Col md={6}>
-          <ContactForm emailSuccess={emailSuccess} setEmailSuccess={setEmailSuccess}/>
+       <ContactInfo emailSuccess={emailSuccess} />
           
-        </Col>
-      </Row>
-    </Container>
+      <ContactForm emailSuccess={emailSuccess} setEmailSuccess={setEmailSuccess}/>
+
+    </div>
+    
+      
+        
+     
+        
+         
+      
+   
   )
 }
 

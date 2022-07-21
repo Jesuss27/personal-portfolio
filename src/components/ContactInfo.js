@@ -15,7 +15,8 @@ function ContactInfo({emailSuccess}) {
 
    
   return (
-    <Container>
+    <Container style={{padding:"1rem"}}>
+      <h2 style={{color:"white"}}>Contact</h2>
       <Row>
             <Map />
       </Row>

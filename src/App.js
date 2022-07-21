@@ -24,9 +24,9 @@ const [isContactVisible, setIsContactVisible] = useState()
     isAboutVisible={isAboutVisible} 
     isPortfolioVisible={isPortfolioVisible} 
     isContactVisible={isContactVisible} />
-    <Routes>
+    <Routes  >
       <Route 
-      path="/" 
+      path={`/`} 
       element={
       <Home 
         setIsLandingVisible={setIsLandingVisible} 
@@ -38,6 +38,7 @@ const [isContactVisible, setIsContactVisible] = useState()
         </Route>
       
     </Routes>
+   
     
     
     
