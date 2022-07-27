@@ -1,9 +1,22 @@
 import aipScreenshot from "../images/aipScreenshot.png"
 import literbugScreenshot from "../images/literbugScreenshot.png"
 import weatherserveScreenshot from "../images/weatherserveScreenshot.png"
+import artistScreenshot from "../images/artistPortfolio.png"
 
 
 export const featuredProjects = [
+    {
+        title:"Artist Portfolio",
+        description:`A functional website concept for a graphic designer. A focus on visuals that highlights
+        the skills of the artist. Fully responsive and built in React. Utilizes React packages EmailJS for 
+        direct messaging and SwiperJS for responsive image carousels. Animations with Framer Motion.`,
+        skills:["React", "EmailJS","Framer Motion", "HTML", "SCSS"],
+        image:artistScreenshot,
+        id:3,
+        githubLink:"https://github.com/Jesuss27/carlas_design_project",
+        herokuLink:"https://carla-portfolio.herokuapp.com/",
+
+    },
     {
         title:"Poetify",
         description:`An app that takes your favorite books and poems

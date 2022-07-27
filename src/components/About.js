@@ -38,7 +38,7 @@ function About( {setIsAboutVisible}) {
                     I've gotten quiet good at it.</p>   
 
                 <p>Today I spend my days, when I'm not playing chess or 
-                    rolling on the jiu jitsu mats, <span className="highlight-purple">designing </span>and
+                    lifting something in the gym, <span className="highlight-purple">designing </span>and
                      <span className="highlight-purple"> developing</span> web applications that look amazing 
                      and work just the way that they should!</p>
 

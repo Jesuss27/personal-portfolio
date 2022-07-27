@@ -12,7 +12,7 @@ function Project( { title, description, skillsDiv, isMedium, herokuLink, githubL
   return (
     <Row className='my-5'>
         <Col> 
-            <div className="cardContainer" style={{position:"relative"}}>
+            <div className="cardContainer" style={{position:"relative",marginBottom:"40px",}}>
                 <div style={{
                     position:"absolute",
                     right: "0",

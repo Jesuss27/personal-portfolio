@@ -27,7 +27,7 @@ function Landing( {setIsLandingVisible}) {
               <p className='mt-2'>I am a <span className='highlight-purple'>web developer</span> that specializes in 
                   building immersive digital adventures. Currently,
                   I'm looking to join a firm designing and developing digital products that is 
-                  focused on evolving human-centric businesses and providing quality services</p>
+                  focused on evolving human-centric businesses and providing quality services.</p>
 
               <Link to="/#portfolio"><Button style={{padding:"2em 3em"}}  variant="outline-primary">Check out my portfolio!</Button></Link>
               
